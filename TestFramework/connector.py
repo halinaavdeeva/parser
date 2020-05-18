@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class Connector:
     def __init__(self, database_url):
         conn = sqlite3.connect(database_url)

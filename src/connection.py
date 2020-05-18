@@ -15,7 +15,7 @@ class Connection:
             sqlite_connection = sqlite3.connect(self.db)
 
             sqlite_create_table_query = '''CREATE TABLE IF NOT EXISTS ''' + self.table_name + ''' (
-                book_name text,
+                book_name text PRIMARY KEY,
                 number_of_paragraphs int,
                 number_of_words int,
                 number_of_letters int,
@@ -71,7 +71,7 @@ class Connection:
             columns = model.get_second_table()[1]
 
             sqlite_create_table_query = '''CREATE TABLE IF NOT EXISTS ''' + second_table_name + ''' (
-                   word text,
+                   word text PRIMARY KEY,
                    count int,
                    count_uppercase int);'''
 
