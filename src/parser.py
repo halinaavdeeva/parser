@@ -60,7 +60,7 @@ class Parser:
 
     def second_table(self):
         logging.info("Getting statistics for the second table...")
-        list_of_words = []
+        words = []
         paragraphs = self.root.findall('.//{*}body')
         full_string = ""
         for paragraph in paragraphs:
@@ -71,21 +71,16 @@ class Parser:
 
         split_string_in_lowercase = full_string.lower().split()
         unique_split_string_in_lowercase = set(split_string_in_lowercase)
-
         string_with_uppercase = re.findall(r'\b[A-Z]\w*\b|\b[А-Я]\w*\b', full_string)
         split_upper_string_in_lowercase = ' '.join(string_with_uppercase).lower().split()
         unique_split_upper_string_in_lowercase = set(split_upper_string_in_lowercase)
 
         for word in unique_split_string_in_lowercase:
             count_uppercase = 0
-            count_word = split_string_in_lowercase.count(word)
+            count = split_string_in_lowercase.count(word)
 
-            for w in unique_split_upper_string_in_lowercase:
-                if w == word:
-                    count_uppercase = split_upper_string_in_lowercase.count(w)
-
-            list_of_words.append((word, count_word, count_uppercase))
-
-        logging.info("The second table with statistics is created")
-
-        return list_of_words
+            for word1 in unique_split_upper_string_in_lowercase:
+                if word1 == word:
+                    count_uppercase = split_upper_string_in_lowercase.count(word1)
+            words.append((word, count, count_uppercase))
+        return words

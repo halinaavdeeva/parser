@@ -1,4 +1,4 @@
-from src.Parser import Parser
+from src.parser import Parser
 
 
 class Model:

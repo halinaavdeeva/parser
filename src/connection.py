@@ -43,15 +43,12 @@ class Connection:
     def insert_table(self, model):
         try:
             sqlite_connection = sqlite3.connect(self.db)
-
-            sqlite_insert_table_query = '''INSERT OR REPLACE INTO ''' + self.table_name + '''                               
-                                          VALUES (?, ?, ?, ?, ?, ?);'''
-
             cursor = sqlite_connection.cursor()
             logging.info("Successfully connected to sqlite")
 
             columns = tuple(model.get_table())
-            cursor.execute(sqlite_insert_table_query, columns)
+            cursor.execute('''INSERT OR REPLACE INTO ''' + self.table_name + '''                               
+                                          VALUES (?, ?, ?, ?, ?, ?);''', columns)
 
             sqlite_connection.commit()
             logging.info("Number of records is {}".format(str(cursor.rowcount), self.table_name))
@@ -84,10 +81,8 @@ class Connection:
             cursor.execute(sqlite_create_table_query)
             sqlite_connection.commit()
 
-            sqlite_insert_query_table = '''INSERT OR REPLACE INTO ''' + second_table_name + '''                               
-                                          VALUES (?, ?, ?);'''
-
-            cursor.executemany(sqlite_insert_query_table, columns)
+            cursor.executemany('''INSERT OR REPLACE INTO ''' + second_table_name + '''                               
+                                          VALUES (?, ?, ?);''', columns)
             sqlite_connection.commit()
             logging.info("1 record is inserted into {} table".format(second_table_name))
             sqlite_connection.commit()
