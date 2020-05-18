@@ -1,8 +1,8 @@
 from sys import argv
-from configurator import Configurator
-from connector import Connector
-from resulting import Result
-from test_processor import TestProcessor
+from TestFramework.configurator import Configurator
+from TestFramework.connector import Connector
+from TestFramework.resulting import Result
+from TestFramework.test_processor import TestProcessor
 
 
 def run():
@@ -17,6 +17,7 @@ def run():
     test_processor.process()
 
     logger.finish_test()
+
 
 if __name__ == '__main__':
     run()
