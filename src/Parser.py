@@ -13,7 +13,7 @@ class Parser:
 
     def book_name(self):
         book_name = self.root.find(".//*[@info-type='src-book-title']").text
-        logging.info('Statistics for {} book'.format(book_name))
+        logging.info('Getting statistics for {} book'.format(book_name))
         return book_name
 
     def number_of_paragraph(self):
@@ -46,7 +46,7 @@ class Parser:
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_with_capital_letters = re.findall(r'\b[A-Z]\w*\b|\b[А-Я]\w*\b', full_string)
             count += len(words_with_capital_letters)
-        logging.info('Number of words with capital letters was counted: {}'.format(str(count)))
+        logging.info('Number of words with capital letters: {}'.format(str(count)))
         return count
 
     def words_in_lowercase(self):
@@ -55,11 +55,11 @@ class Parser:
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_in_lowercase = re.findall(r'\b[a-z]\w*|\b[а-я]\w*', full_string)
             count += len(words_in_lowercase)
-        logging.info('Number of words in lowercase was counted: {}'.format(str(count)))
+        logging.info('Number of words in lowercase: {}'.format(str(count)))
         return count
 
-    def frequency_of_word(self):
-        logging.info("Count frequency of word in progress...")
+    def second_table(self):
+        logging.info("Getting statistics for the second table...")
         list_of_words = []
         paragraphs = self.root.findall('.//{*}body')
         full_string = ""
@@ -78,7 +78,6 @@ class Parser:
 
         for word in unique_split_string_in_lowercase:
             count_uppercase = 0
-
             count_word = split_string_in_lowercase.count(word)
 
             for w in unique_split_upper_string_in_lowercase:
@@ -87,6 +86,6 @@ class Parser:
 
             list_of_words.append((word, count_word, count_uppercase))
 
-        logging.info("Count frequency of word finished")
+        logging.info("The second table with statistics is created")
 
         return list_of_words

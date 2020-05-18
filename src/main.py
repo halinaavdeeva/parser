@@ -1,6 +1,6 @@
 from src.file_handler import FileHandler
-from src.Connection import Connection
-from src.data_book import Model
+from src.connection import Connection
+from src.model import Model
 
 
 def main():
