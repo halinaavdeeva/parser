@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(filename="../sample.log", level=logging.INFO)
 
 
-class Folder:
+class FileHandler:
     def __init__(self):
         self.path_input = ""
         self.path_incorrect_input = ""
