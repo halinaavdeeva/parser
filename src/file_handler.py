@@ -11,6 +11,13 @@ class FileHandler:
         self.path_input = ""
         self.path_incorrect_input = ""
 
+    def fb2_books(self, path):
+        list_of_files = []
+        for file in os.listdir(path):
+            if file.endswith(".fb2"):
+                list_of_files.append(file)
+        return list_of_files
+
     def create_folder(self):
         page = os.path.expanduser('~')
         self.path_input = os.path.join(page, 'Desktop', 'input')
@@ -23,14 +30,7 @@ class FileHandler:
                 os.mkdir(self.path_incorrect_input)
                 logging.info("Input and Incorrect input folders were created")
         except OSError as error:
-            logging.error("Creation of the folder failed", error)
-
-    def fb2_books(self, path):
-        list_of_files = []
-        for file in os.listdir(path):
-            if file.endswith(".fb2"):
-                list_of_files.append(file)
-        return list_of_files
+            logging.error("Creation of folders failed", error)
 
     def move_file(self):
         for file in os.listdir(self.path_input):
