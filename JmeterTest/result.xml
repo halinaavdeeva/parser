@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="3" it="0" lt="3" ct="2" ts="1574082104017" s="false" lb="Check table &apos;tracks&apos; for data existing" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="14" sby="0" sc="1" ec="1" ng="1" na="1" hn="MBP-Denis">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: variable(result_1) expected to equal /
+
+****** received  : 350[[[3]]]
+
+****** comparison: 350[[[4]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/dinas/Desktop/dqe_mentoring/chinook.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+3503
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count(*) FROM tracks
+
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="1" ct="0" ts="1574082104021" s="false" lb="Check table &apos;albums&apos; for data existing" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="13" sby="0" sc="1" ec="1" ng="1" na="1" hn="MBP-Denis">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: variable(result_1) expected to equal /
+
+****** received  : 3[[[47 ]]]
+
+****** comparison: 3[[[503]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/dinas/Desktop/dqe_mentoring/chinook.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+347
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count(*) FROM albums
+
+</samplerData>
+</sample>
+
+</testResults>

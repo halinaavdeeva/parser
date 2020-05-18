@@ -1,0 +1,9 @@
+{
+  "dev": {
+    "database": "/Users/dinas/Desktop/dqe_mentoring/chinook.db",
+    "test_data_folder": "/Users/dinas/Desktop/dqe_mentoring/TestFramework/test_data"
+  },
+
+  "uat": {
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Check table 'tracks' for data existing",
+      "query": "SELECT count(*) FROM tracks",
+      "expected": 3503
+    },
+    {
+      "name": "Check table 'albums' for data existing",
+      "query": "SELECT count(*) FROM albums",
+      "expected": 3503
+    }
+  ]
+}
