@@ -1,4 +1,4 @@
-from src.BookParser.Parser import Parser
+from src.Parser import Parser
 import logging
 
 logging.basicConfig(filename="../sample.log", level=logging.INFO)

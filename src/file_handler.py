@@ -25,18 +25,16 @@ class FileHandler:
         except OSError as error:
             logging.error("Creation of the folder failed", error)
 
+    def fb2_books(self, path):
+        list_of_files = []
+        for file in os.listdir(path):
+            if file.endswith(".fb2"):
+                list_of_files.append(file)
+        return list_of_files
+
     def move_file(self):
         for file in os.listdir(self.path_input):
             if not file.endswith(".fb2"):
                 logging.info("File {} was moved to {}".format(os.path.join(self.path_input,
                                                                            file), self.path_incorrect_input))
                 shutil.move(os.path.join(self.path_input, file), self.path_incorrect_input)
-
-    def find_all_fb2_books(self, path):
-        list_of_files = []
-        for file in os.listdir(path):
-            if file.endswith(".fb2"):
-                logging.info("Processing of file {} in progress...".format(os.path.join(path, file)))
-                list_of_files.append(file)
-
-        return list_of_files
