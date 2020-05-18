@@ -22,47 +22,48 @@ class Parser:
         return len(paragraphs)
 
     def number_of_words(self):
-        count = 0
+        linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_in_paragraph = re.findall(r'\b[a-zA-Z]\w*|\b[а-яА-Я]\w*', full_string)
-            count += len(words_in_paragraph)
-        logging.info('Number of words: {}'.format(str(count)))
-        return count
+            linecount += len(words_in_paragraph)
+        logging.info('Number of words: {}'.format(str(linecount)))
+        return linecount
 
     def number_of_letters(self):
-        count = 0
+        linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_in_paragraph = re.findall(r'[a-zA-Z]|[а-яА-Я]', full_string)
-            count += len(words_in_paragraph)
-        logging.info('Number of letters: {}'.format(str(count)))
-        return count
+            linecount += len(words_in_paragraph)
+        logging.info('Number of letters: {}'.format(str(linecount)))
+        return linecount
 
     def words_with_capital_letters(self):
-        count = 0
+        linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_with_capital_letters = re.findall(r'\b[A-Z]\w*\b|\b[А-Я]\w*\b', full_string)
-            count += len(words_with_capital_letters)
-        logging.info('Number of words with capital letters: {}'.format(str(count)))
-        return count
+            linecount += len(words_with_capital_letters)
+        logging.info('Number of words with capital letters: {}'.format(str(linecount)))
+        return linecount
 
     def words_in_lowercase(self):
-        count = 0
+        linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
             words_in_lowercase = re.findall(r'\b[a-z]\w*|\b[а-я]\w*', full_string)
-            count += len(words_in_lowercase)
-        logging.info('Number of words in lowercase: {}'.format(str(count)))
-        return count
+            linecount += len(words_in_lowercase)
+        logging.info('Number of words in lowercase: {}'.format(str(linecount)))
+        return linecount
 
     def second_table(self):
         logging.info("Getting statistics for the second table...")
         words = []
         paragraphs = self.root.findall('.//{*}body')
-        full_string = ""
+
         for paragraph in paragraphs:
+            full_string = ""
             string = ''.join(paragraph.itertext())
             full_string = full_string + " " + string
 
