@@ -18,9 +18,8 @@ class Parser:
 
     def number_of_paragraph(self):
         paragraphs = self.root.findall('.//{*}p')
-        count = len(paragraphs)
-        logging.info('Number of paragraph: {}'.format(str(count)))
-        return count
+        logging.info('Number of paragraph: {}'.format(str(len(paragraphs))))
+        return len(paragraphs)
 
     def number_of_words(self):
         count = 0

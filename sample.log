@@ -1,0 +1,17 @@
+INFO:root:Getting statistics for Flowers for Algernon book
+INFO:root:Getting statistics for Flowers for Algernon book
+INFO:root:Number of paragraph: 2267
+INFO:root:Number of words: 63812
+INFO:root:Number of letters: 306574
+INFO:root:Number of words with capital letters: 8460
+INFO:root:Number of words in lowercase: 55352
+INFO:root:Getting statistics for the second table...
+INFO:root:Successfully connected to sqlite
+INFO:root:SQLite table books_data is created
+INFO:root:Connection is closed
+INFO:root:Successfully connected to sqlite
+INFO:root:Number of records is 1
+INFO:root:Connection is closed
+INFO:root:Successfully connected to sqlite
+INFO:root:1 record is inserted into flowers_for_algernon table
+INFO:root:Connection is closed
