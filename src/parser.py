@@ -59,11 +59,9 @@ class Parser:
 
     def second_table(self):
         logging.info("Getting statistics for the second table...")
+        full_string = ""
         words = []
-        paragraphs = self.root.findall('.//{*}body')
-
-        for paragraph in paragraphs:
-            full_string = ""
+        for paragraph in self.root.findall('.//{*}body'):
             string = ''.join(paragraph.itertext())
             full_string = full_string + " " + string
 
