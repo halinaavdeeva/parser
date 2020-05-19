@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="3" it="0" lt="3" ct="3" ts="1589928073764" s="true" lb="Check &apos;book_data&apos; table for data existing" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="11" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+1
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count(*) FROM books_data
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073768" s="true" lb="Check &apos;flowers_for_algernon&apos; table for data existing" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="15" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+13245
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count(*) FROM flowers_for_algernon
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073769" s="true" lb="Check &apos;book_name&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="31" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">book_name
+Flowers for Algernon
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT book_name FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073769" s="true" lb="Check &apos;number_of_paragraphs&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="26" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">number_of_paragraphs
+2267
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT number_of_paragraphs FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073770" s="true" lb="Check &apos;number_of_letters&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="25" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">number_of_letters
+306574
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT number_of_letters FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073770" s="true" lb="Check &apos;number_of_words&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="22" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">number_of_words
+63812
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT number_of_words FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073770" s="true" lb="Check &apos;words_with_capital_letters&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="32" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">words_with_capital_letters
+8460
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT words_with_capital_letters FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073771" s="true" lb="Check &apos;words_in_lowercase&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="25" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">words_in_lowercase
+55352
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT words_in_lowercase FROM books_data
+WHERE book_name = &apos;Flowers for Algernon&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073771" s="true" lb="Check &apos;count&apos; in &apos;flowers_for_algernon&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="8" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count
+7
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count FROM flowers_for_algernon
+WHERE word = &apos;привет&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073771" s="true" lb="Check &apos;count_uppercase&apos; in &apos;flowers_for_algernon&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="18" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count_uppercase
+5
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT count_uppercase FROM flowers_for_algernon
+WHERE word = &apos;привет&apos;
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1589928073772" s="true" lb="Check &apos;number_of_words&apos; value equals to sum of &apos;words_with_capital_letters&apos; and &apos;words_in_lowercase&apos; in &apos;books_data&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="117" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">CASE 
+        WHEN words_with_capital_letters + words_in_lowercase = number_of_words THEN 1
+        ELSE 0
+    END
+1
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT 
+    CASE 
+        WHEN words_with_capital_letters + words_in_lowercase = number_of_words THEN 1
+        ELSE 0
+    END
+FROM books_data
+
+</samplerData>
+</sample>
+<sample t="2" it="0" lt="2" ct="0" ts="1589928073772" s="false" lb="Check there are not numbers in  &apos;word&apos;  for &apos;flowers_for_algernon&apos; table" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" de="UTF-8" by="68" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9002">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: variable(result11_1) expected to equal /
+
+****** received  : [[[0]]]
+
+****** comparison: [[[1]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/Users/Halina_Avdeeva/Desktop/DQE_Mentoring/Avdeeva_task/new.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">CASE 
+        WHEN count(*) is null THEN 1
+        ELSE 0
+    END
+0
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT 
+    CASE 
+        WHEN count(*) is null THEN 1
+        ELSE 0
+    END
+FROM flowers_for_algernon 
+WHERE printf(&quot;%d&quot;, word) = word
+
+</samplerData>
+</sample>
+
+</testResults>
