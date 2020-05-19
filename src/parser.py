@@ -25,6 +25,7 @@ class Parser:
         linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
+            full_string = re.sub(r'[0-9]+', " ", full_string)
             words_in_paragraph = re.findall(r'\b[a-zA-Z]\w*|\b[а-яА-Я]\w*', full_string)
             linecount += len(words_in_paragraph)
         logging.info('Number of words: {}'.format(str(linecount)))
@@ -34,6 +35,7 @@ class Parser:
         linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
+            full_string = re.sub(r'[0-9]+', " ", full_string)
             words_in_paragraph = re.findall(r'[a-zA-Z]|[а-яА-Я]', full_string)
             linecount += len(words_in_paragraph)
         logging.info('Number of letters: {}'.format(str(linecount)))
@@ -43,6 +45,7 @@ class Parser:
         linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
+            full_string = re.sub(r'[0-9]+', " ", full_string)
             words_with_capital_letters = re.findall(r'\b[A-Z]\w*\b|\b[А-Я]\w*\b', full_string)
             linecount += len(words_with_capital_letters)
         logging.info('Number of words with capital letters: {}'.format(str(linecount)))
@@ -52,6 +55,7 @@ class Parser:
         linecount = 0
         for paragraph in self.root.findall('.//{*}body'):
             full_string = re.sub(r'\W+', " ", ''.join(paragraph.itertext()))
+            full_string = re.sub(r'[0-9]+', " ", full_string)
             words_in_lowercase = re.findall(r'\b[a-z]\w*|\b[а-я]\w*', full_string)
             linecount += len(words_in_lowercase)
         logging.info('Number of words in lowercase: {}'.format(str(linecount)))
@@ -66,6 +70,7 @@ class Parser:
             full_string = full_string + " " + string
 
         full_string = re.sub(r'\W+', " ", full_string)
+        full_string = re.sub(r'[0-9]+', " ", full_string)
 
         split_string_in_lowercase = full_string.lower().split()
         unique_split_string_in_lowercase = set(split_string_in_lowercase)
