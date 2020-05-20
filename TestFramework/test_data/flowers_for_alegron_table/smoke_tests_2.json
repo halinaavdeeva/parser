@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Check 'flowers_for_algernon' table for data existing",
+      "query": "SELECT count(*) FROM flowers_for_algernon",
+      "expected": 13245
+    },
+    {
+      "name": "Check 'count' in 'flowers_for_algernon' table",
+      "query": "SELECT count FROM flowers_for_algernon WHERE word = 'привет'",
+      "expected": 7
+    },
+    {
+      "name": "Check 'count_uppercase' in 'flowers_for_algernon' table",
+      "query": "SELECT count_uppercase FROM flowers_for_algernon WHERE word = 'привет'",
+      "expected": 5
+    },
+    {
+      "name": "Check there are not numbers in  'word'  for 'flowers_for_algernon' table",
+      "query": "SELECT CASE WHEN count(*) is null THEN 1 ELSE 0 END FROM flowers_for_algernon WHERE printf(\"%d\", word) = word",
+      "expected": 1
+    }
+  ]
+}

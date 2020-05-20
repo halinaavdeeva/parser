@@ -1,9 +1,0 @@
-{
-  "dev": {
-    "database": "/Users/Halina_Avdeeva/PycharmProjects/Avdeeva_task/new.db",
-    "test_data_folder": "/Users/Halina_Avdeeva/PycharmProjects/Avdeeva_task/TestFramework/test_data"
-  },
-
-  "uat": {
-  }
-}
