@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "name": "Check table 'books_data' for data existing",
+      "query": "SELECT count(*) FROM books_data",
+      "expected": 1
+    },
+    {
+      "name": "Check 'book_name' in 'books_data' table",
+      "query": "SELECT book_name FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": "Flowers for Algernon"
+    },
+    {
+      "name": "Check 'number_of_paragraphs' in 'books_data' table",
+      "query": "SELECT number_of_paragraphs FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 2267
+    },
+    {
+      "name": "Check 'number_of_letters' in 'books_data' table",
+      "query": "SELECT number_of_letters FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 306574
+    },
+    {
+      "name": "Check 'number_of_words' in 'books_data' table",
+      "query": "SELECT number_of_words FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 63812
+    },
+    {
+      "name": "Check 'words_with_capital_letters' in 'books_data' table",
+      "query": "SELECT words_with_capital_letters FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 8460
+    },
+    {
+      "name": "Check 'words_in_lowercase' in 'books_data' table",
+      "query": "SELECT words_in_lowercase FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 55352
+    },
+    {
+      "name": "Check 'number_of_words' in 'books_data' table",
+      "query": "SELECT number_of_words FROM books_data WHERE book_name = 'Flowers for Algernon'",
+      "expected": 306574
+    },
+    {
+      "name": "Check 'number_of_words' value equals to sum of 'words_with_capital_letters' and 'words_in_lowercase' in 'books_data' table",
+      "query": "SELECT  CASE WHEN words_with_capital_letters + words_in_lowercase = number_of_words THEN 1 ELSE 0 END FROM books_data",
+      "expected": 1
+    }
+  ]
+}
