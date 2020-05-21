@@ -3,9 +3,9 @@
 class Result:
     def __init__(self, folder):
         if folder == 'books_data_table':
-            self.result_file = open('books_data_table', 'w')
+            self.result_file = open('results/books_data_table.log', 'w')
         else:
-            self.result_file = open('flowers_for_alegron_table', 'w')
+            self.result_file = open('results/flowers_for_alegron_table.log', 'w')
 
     def start_test(self, folder):
         self.result_file.write('\n\nTesting of {} was started\n'.format(folder))

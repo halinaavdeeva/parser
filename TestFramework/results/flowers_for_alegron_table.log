@@ -1,0 +1,12 @@
+
+
+Testing of C:\Users\Halina_Avdeeva\PycharmProjects\Avdeeva_task\TestFramework\test_data\flowers_for_alegron_table\smoke_tests_2.json was started
+
+
+Test case 'Check 'flowers_for_algernon' table for data existing'
+PASS. Result is '13245' as expected
+	Query: SELECT count(*) FROM flowers_for_algernon
+
+Test case 'Check there are not numbers in  'word'  for 'flowers_for_algernon' table'
+FAIL. Result is '0', but expected '1'
+	Query: SELECT CASE WHEN count(*) is null THEN 1 ELSE 0 END FROM flowers_for_algernon WHERE printf("%d", word) = word

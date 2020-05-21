@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath('..'))
+
 from sys import argv
 from TestFramework.configurator import Configurator
 from TestFramework.connector import Connector
@@ -12,7 +17,7 @@ def run():
 
     connector = Connector(database_url)
 
-    logger = Result()
+    logger = Result(folder)
 
     test_processor = TestProcessor(config, connector, logger)
     test_processor.process()

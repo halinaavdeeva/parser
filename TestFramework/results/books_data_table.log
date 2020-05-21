@@ -1,0 +1,40 @@
+
+
+Testing of C:\Users\Halina_Avdeeva\PycharmProjects\Avdeeva_task\TestFramework\test_data\books_data_table\smoke_tests_1.json was started
+
+
+Test case 'Check table 'books_data' for data existing'
+PASS. Result is '1' as expected
+	Query: SELECT count(*) FROM books_data
+
+Test case 'Check 'book_name' in 'books_data' table'
+PASS. Result is 'Flowers for Algernon' as expected
+	Query: SELECT book_name FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'number_of_paragraphs' in 'books_data' table'
+PASS. Result is '2267' as expected
+	Query: SELECT number_of_paragraphs FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'number_of_letters' in 'books_data' table'
+PASS. Result is '306574' as expected
+	Query: SELECT number_of_letters FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'number_of_words' in 'books_data' table'
+PASS. Result is '63812' as expected
+	Query: SELECT number_of_words FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'words_with_capital_letters' in 'books_data' table'
+PASS. Result is '8460' as expected
+	Query: SELECT words_with_capital_letters FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'words_in_lowercase' in 'books_data' table'
+PASS. Result is '55352' as expected
+	Query: SELECT words_in_lowercase FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'number_of_words' in 'books_data' table'
+FAIL. Result is '63812', but expected '306574'
+	Query: SELECT number_of_words FROM books_data WHERE book_name = 'Flowers for Algernon'
+
+Test case 'Check 'number_of_words' value equals to sum of 'words_with_capital_letters' and 'words_in_lowercase' in 'books_data' table'
+PASS. Result is '1' as expected
+	Query: SELECT  CASE WHEN words_with_capital_letters + words_in_lowercase = number_of_words THEN 1 ELSE 0 END FROM books_data
